@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
  web:
-  image: fredoot/fractals:latest
   ports:
   - 8000:8000
   entrypoint:
