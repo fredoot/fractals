@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
  web:
+  image: fredoot/fractals:latest
   ports:
   - 8000:8000
   entrypoint:
@@ -9,7 +10,7 @@ services:
 
  pgdb:
   ports:
-  - 5433:5432
+  - 5432:5432
   environment:
   - POSTGRES_USER=fractals
   - POSTGRES_PASSWORD=fractals
