@@ -3,6 +3,8 @@ version: '3.8'
 services:
  web:
   image: fredoot/fractals-web:latest
+  depends_on:
+    - "pgdb"
 
  pgdb:
   image: postgres
