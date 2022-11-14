@@ -4,10 +4,8 @@ services:
  web:
   ports:
   - 8000:8000
-  volumes:
-  - ./:/app
   entrypoint:
-    ["/bin/bash", "./docker-entrypoint.sh"]
+   - ./docker-entrypoint.sh
 
  pgdb:
   ports:
@@ -20,5 +18,3 @@ services:
 
 volumes:
   pgdata:
-
-

@@ -4,13 +4,15 @@ FROM python:3.10-slim-buster
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+COPY . .
 
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 
 COPY . .
 
-#RUN chmod +x docker-entrypoint.sh
-ENTRYPOINT ["/bin/bash", "./docker-entrypoint.sh"]
+RUN chmod +x docker-entrypoint.sh
 

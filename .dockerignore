@@ -1,0 +1,6 @@
+#Not applied on dev environment because all the source code will be bind mounted on a volume
+.venv/
+**__pycache__/
+.git/
+.github/
+.gitignore
