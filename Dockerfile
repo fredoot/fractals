@@ -12,5 +12,5 @@ RUN python -m pip install -r requirements.txt
 COPY . .
 
 #RUN chmod +x docker-entrypoint.sh
-ENTRYPOINT ["/bin/sh", "./docker-entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "./docker-entrypoint.sh"]
 
