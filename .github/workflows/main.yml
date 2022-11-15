@@ -40,9 +40,9 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.USERNAME }}
+        username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.PORT }}
+        port: ${{ secrets.SSH_PORT }}
         script: |
           cd fractals
           curl -O https://raw.githubusercontent.com/fredoot/fractals/main/docker-compose.base.yml
