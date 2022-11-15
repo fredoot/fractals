@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-#^q)jqwo##ab7y26am#hf3!fd)ud-&tn^dt%!kix6q+-gslk&r
 DEBUG = True
 
 # Temp configuration for production host
-ALLOWED_HOSTS = ["92.222.9.152"]
+ALLOWED_HOSTS = ["92.222.9.152", "localhost"]
 
 
 # Application definition
