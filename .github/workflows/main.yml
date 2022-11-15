@@ -40,11 +40,16 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        username: ubuntu
+        username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
+        port: ${{ secrets.PORT }}
         script: |
-          touch test.txt
+          cd fractals
+          curl -O https://raw.githubusercontent.com/fredoot/fractals/main/docker-compose.base.yml
+          curl -O https://raw.githubusercontent.com/fredoot/fractals/main/docker-compose.prod.yml
+          docker compose -f docker-compose.base.yml -f docker-compose.base.yml up --build --force-recreate -d
+          docker image prune -f
+
 
 
 
