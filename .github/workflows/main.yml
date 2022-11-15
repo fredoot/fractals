@@ -47,7 +47,7 @@ jobs:
           cd fractals
           curl -O https://raw.githubusercontent.com/fredoot/fractals/main/docker-compose.base.yml
           curl -O https://raw.githubusercontent.com/fredoot/fractals/main/docker-compose.prod.yml
-          docker compose -f docker-compose.base.yml -f docker-compose.base.yml up --build --force-recreate -d
+          docker compose -f docker-compose.base.yml -f docker-compose.prod.yml up --build --force-recreate -d
           docker image prune -f
 
 
