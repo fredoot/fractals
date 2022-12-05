@@ -10,7 +10,10 @@ class FractalViewSet(viewsets.ModelViewSet):
 
     queryset = Fractal.objects.all()
     serializer_class = FractalSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsCreatorOrReadOnly]
+    permission_classes = [
+        permissions.IsAuthenticatedOrReadOnly,
+        IsCreatorOrReadOnly,
+    ]
 
     def perform_create(self, serializer):
         serializer.save(creator=self.request.user)
